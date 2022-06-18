@@ -31,7 +31,10 @@ int main()
     //Simulation and Run
     Simulation simu = simulation (&problem, __DURATION__, __METH__, __PREC__);
     simu.run_simulation();
-    
+    simu.export_yn("ivp.txt")
+  
+    // For having the result in t=16, we can uncomment following lines
+    /*
     std::cout<<"Verified Numerical Solution"<<std::endl;
     std::cout<<"Solution Enclosure at t= "<<__DURATION__<<std::endl;
     
@@ -42,6 +45,7 @@ int main()
         std::cout<<ylast[i]<<'\t';
     }
     std::cout<<std::endl;
+    */
     return 0;
 }
         
